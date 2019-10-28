@@ -1,0 +1,494 @@
+#####################
+MODULE: basics.py
+#####################
+
+Trying:
+    concatenate_lists(listOne,listTwo)
+Expecting:
+    ['Germany', 'Spain', 'Italy', 'Poland', 'France', 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 118, in basics.concatenate_lists
+Failed example:
+    concatenate_lists(listOne,listTwo)
+Expected:
+    ['Germany', 'Spain', 'Italy', 'Poland', 'France', 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5]
+Got nothing
+Trying:
+    concatenate_lists([42,3],["Super","Duper"])
+Expecting:
+    [42, 3, 'Super', 'Duper']
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 120, in basics.concatenate_lists
+Failed example:
+    concatenate_lists([42,3],["Super","Duper"])
+Expected:
+    [42, 3, 'Super', 'Duper']
+Got nothing
+Trying:
+    contains_substring("Apfel","Apfelkuchen")
+Expecting:
+    True
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 205, in basics.contains_substring
+Failed example:
+    contains_substring("Apfel","Apfelkuchen")
+Expected:
+    True
+Got nothing
+Trying:
+    contains_substring("Apfel","APFEL")
+Expecting:
+    True
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 207, in basics.contains_substring
+Failed example:
+    contains_substring("Apfel","APFEL")
+Expected:
+    True
+Got nothing
+Trying:
+    contains_substring("Sky","Skyrim")
+Expecting:
+    True
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 209, in basics.contains_substring
+Failed example:
+    contains_substring("Sky","Skyrim")
+Expected:
+    True
+Got nothing
+Trying:
+    contains_substring("Gerald","The witcher")
+Expecting:
+    False
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 211, in basics.contains_substring
+Failed example:
+    contains_substring("Gerald","The witcher")
+Expected:
+    False
+Got nothing
+Trying:
+    contains_substring("32","Hallo23")
+Expecting:
+    False
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 213, in basics.contains_substring
+Failed example:
+    contains_substring("32","Hallo23")
+Expected:
+    False
+Got nothing
+Trying:
+    contains_substring("Salat","S a l a t")
+Expecting:
+    False
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 215, in basics.contains_substring
+Failed example:
+    contains_substring("Salat","S a l a t")
+Expected:
+    False
+Got nothing
+Trying:
+    count_to_k(3)
+Expecting:
+    0
+    1
+    2
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 174, in basics.count_to_k
+Failed example:
+    count_to_k(3)
+Expected:
+    0
+    1
+    2
+Got nothing
+Trying:
+    count_to_k(-2)
+Expecting:
+    -1
+    -2
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 178, in basics.count_to_k
+Failed example:
+    count_to_k(-2)
+Expected:
+    -1
+    -2
+Got nothing
+Trying:
+    count_to_k(0)
+Expecting nothing
+ok
+Trying:
+    every_nth("Ich",2)
+Expecting:
+    'Ih'
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 92, in basics.every_nth
+Failed example:
+    every_nth("Ich",2)
+Expected:
+    'Ih'
+Got nothing
+Trying:
+    every_nth("Programmierung",5)
+Expecting:
+    'Par'
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 94, in basics.every_nth
+Failed example:
+    every_nth("Programmierung",5)
+Expected:
+    'Par'
+Got nothing
+Trying:
+    every_nth("Apfelstrudel",3)
+Expecting:
+    'Aetd'
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 96, in basics.every_nth
+Failed example:
+    every_nth("Apfelstrudel",3)
+Expected:
+    'Aetd'
+Got nothing
+Trying:
+    happy_birthday("Peter","17")
+Expecting:
+    Happy 17th birthday, Peter!
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 60, in basics.happy_birthday
+Failed example:
+    happy_birthday("Peter","17")
+Expected:
+    Happy 17th birthday, Peter!
+Got nothing
+Trying:
+    hello_semester()
+Expecting:
+    Welcome to "Symbolische Programmierung" WS 19/20
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 28, in basics.hello_semester
+Failed example:
+    hello_semester()
+Expected:
+    Welcome to "Symbolische Programmierung" WS 19/20
+Got nothing
+Trying:
+    long_strings(listOne, 5)
+Expecting:
+    [True, False, False, True, True]
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 150, in basics.long_strings
+Failed example:
+    long_strings(listOne, 5)
+Expected:
+    [True, False, False, True, True]
+Got nothing
+Trying:
+    long_strings(["a", "bb", "", "ccc"], 1)
+Expecting:
+    [False, True, False, True]
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 152, in basics.long_strings
+Failed example:
+    long_strings(["a", "bb", "", "ccc"], 1)
+Expected:
+    [False, True, False, True]
+Got nothing
+Trying:
+    modulo(5, 3)
+Expecting:
+    2
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 36, in basics.modulo
+Failed example:
+    modulo(5, 3)
+Expected:
+    2
+Got nothing
+Trying:
+    modulo(100, 24)
+Expecting:
+    4
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 38, in basics.modulo
+Failed example:
+    modulo(100, 24)
+Expected:
+    4
+Got nothing
+Trying:
+    modulo(70, 7)
+Expecting:
+    0
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 40, in basics.modulo
+Failed example:
+    modulo(70, 7)
+Expected:
+    0
+Got nothing
+Trying:
+    no_numbers("Guten Tag!")
+Expecting:
+    True
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 191, in basics.no_numbers
+Failed example:
+    no_numbers("Guten Tag!")
+Expected:
+    True
+Got nothing
+Trying:
+    no_numbers("42 ist eine tolle Zahl")
+Expecting:
+    False
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 193, in basics.no_numbers
+Failed example:
+    no_numbers("42 ist eine tolle Zahl")
+Expected:
+    False
+Got nothing
+Trying:
+    no_numbers("jm584dmdk30")
+Expecting:
+    False
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 195, in basics.no_numbers
+Failed example:
+    no_numbers("jm584dmdk30")
+Expected:
+    False
+Got nothing
+Trying:
+    no_numbers("A B C D E F G H I J K L")
+Expecting:
+    True
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 197, in basics.no_numbers
+Failed example:
+    no_numbers("A B C D E F G H I J K L")
+Expected:
+    True
+Got nothing
+Trying:
+    odd_number(15)
+Expecting:
+    True
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 47, in basics.odd_number
+Failed example:
+    odd_number(15)
+Expected:
+    True
+Got nothing
+Trying:
+    odd_number(6)
+Expecting:
+    False
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 49, in basics.odd_number
+Failed example:
+    odd_number(6)
+Expected:
+    False
+Got nothing
+Trying:
+    odd_number(-3)
+Expecting:
+    True
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 51, in basics.odd_number
+Failed example:
+    odd_number(-3)
+Expected:
+    True
+Got nothing
+Trying:
+    print_squares(listThree)
+Expecting:
+    25
+    16
+    64
+    36
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 161, in basics.print_squares
+Failed example:
+    print_squares(listThree)
+Expected:
+    25
+    16
+    64
+    36
+Got nothing
+Trying:
+    replace_elements([1,2,3,4,5,6,7,8],[0,4,3],0)
+Expecting:
+    [0, 2, 3, 0, 0, 6, 7, 8]
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 138, in basics.replace_elements
+Failed example:
+    replace_elements([1,2,3,4,5,6,7,8],[0,4,3],0)
+Expected:
+    [0, 2, 3, 0, 0, 6, 7, 8]
+Got nothing
+Trying:
+    replace_elements(listOne.copy(),[1,2,3],"North pole")
+Expecting:
+    ['Germany', 'North pole', 'North pole', 'North pole', 'France']
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 140, in basics.replace_elements
+Failed example:
+    replace_elements(listOne.copy(),[1,2,3],"North pole")
+Expected:
+    ['Germany', 'North pole', 'North pole', 'North pole', 'France']
+Got nothing
+Trying:
+    reverse("ABCDE")
+Expecting:
+    'EDCBA'
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 79, in basics.reverse
+Failed example:
+    reverse("ABCDE")
+Expected:
+    'EDCBA'
+Got nothing
+Trying:
+    reverse("Info")
+Expecting:
+    'ofnI'
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 81, in basics.reverse
+Failed example:
+    reverse("Info")
+Expected:
+    'ofnI'
+Got nothing
+Trying:
+    reverse("enoD lleW")
+Expecting:
+    'Well Done'
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 83, in basics.reverse
+Failed example:
+    reverse("enoD lleW")
+Expected:
+    'Well Done'
+Got nothing
+Trying:
+    reverse("12345")
+Expecting:
+    '54321'
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 85, in basics.reverse
+Failed example:
+    reverse("12345")
+Expected:
+    '54321'
+Got nothing
+Trying:
+    second_element(listOne)
+Expecting:
+    'Spain'
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 109, in basics.second_element
+Failed example:
+    second_element(listOne)
+Expected:
+    'Spain'
+Got nothing
+Trying:
+    second_element(listTwo)
+Expecting:
+    2
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 111, in basics.second_element
+Failed example:
+    second_element(listTwo)
+Expected:
+    2
+Got nothing
+Trying:
+    swap_half(["FirstHalf", "FirstHalf", "SecondHalf", "SecondHalf"])
+Expecting:
+    ['SecondHalf', 'SecondHalf', 'FirstHalf', 'FirstHalf']
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 128, in basics.swap_half
+Failed example:
+    swap_half(["FirstHalf", "FirstHalf", "SecondHalf", "SecondHalf"])
+Expected:
+    ['SecondHalf', 'SecondHalf', 'FirstHalf', 'FirstHalf']
+Got nothing
+Trying:
+    swap_half(listOne)
+Expecting:
+    ['Italy', 'Poland', 'France', 'Germany', 'Spain']
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 130, in basics.swap_half
+Failed example:
+    swap_half(listOne)
+Expected:
+    ['Italy', 'Poland', 'France', 'Germany', 'Spain']
+Got nothing
+Trying:
+    word_multiplier("Cheese", 3)
+Expecting:
+    'CheeseCheeseCheese'
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 68, in basics.word_multiplier
+Failed example:
+    word_multiplier("Cheese", 3)
+Expected:
+    'CheeseCheeseCheese'
+Got nothing
+Trying:
+    word_multiplier("Apple", 2)
+Expecting:
+    'AppleApple'
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 70, in basics.word_multiplier
+Failed example:
+    word_multiplier("Apple", 2)
+Expected:
+    'AppleApple'
+Got nothing
+Trying:
+    word_multiplier('Fish', 0)
+Expecting:
+    ''
+**********************************************************************
+File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\abgabe_repos\hw01_basics\Julias\src\hw01_basics\basics.py", line 72, in basics.word_multiplier
+Failed example:
+    word_multiplier('Fish', 0)
+Expected:
+    ''
+Got nothing
+1 items had no tests:
+    basics
+**********************************************************************
+16 items had failures:
+   2 of   2 in basics.concatenate_lists
+   6 of   6 in basics.contains_substring
+   2 of   3 in basics.count_to_k
+   3 of   3 in basics.every_nth
+   1 of   1 in basics.happy_birthday
+   1 of   1 in basics.hello_semester
+   2 of   2 in basics.long_strings
+   3 of   3 in basics.modulo
+   4 of   4 in basics.no_numbers
+   3 of   3 in basics.odd_number
+   1 of   1 in basics.print_squares
+   2 of   2 in basics.replace_elements
+   4 of   4 in basics.reverse
+   2 of   2 in basics.second_element
+   2 of   2 in basics.swap_half
+   3 of   3 in basics.word_multiplier
+42 tests in 17 items.
+1 passed and 41 failed.
+***Test Failed*** 41 failures.

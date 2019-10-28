@@ -1,0 +1,18 @@
+basics.hello_semester           FAILED    0/1 points
+basics.modulo                   FAILED    0/1 points
+basics.odd_number               FAILED    0/1 points
+basics.happy_birthday           FAILED    0/1 points
+basics.word_multiplier          FAILED    0/1 points
+basics.reverse                  FAILED    0/1 points
+basics.every_nth                FAILED    0/1 points
+basics.second_element           FAILED    0/1 points
+basics.concatenate_lists        FAILED    0/1 points
+basics.swap_half                FAILED    0/1 points
+basics.replace_elements         FAILED    0/1 points
+basics.long_strings             FAILED    0/1 points
+basics.print_squares            FAILED    0/1 points
+basics.count_to_k               OK        1/1 points
+basics.no_numbers               FAILED    0/1 points
+basics.contains_substring       FAILED    0/1 points
+####################################
+TOTAL: 1/16 points
