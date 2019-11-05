@@ -1,0 +1,13 @@
+UML Diagramm mit falschem Dateinamen hochgeladen und nicht in 2 seperaten Dateien.
+Klassenname Bank statt Account in UML.
+Die withdraw() Funktion hätte erweitert werden sollen und keine eigene withdrawEvo() Funktion sein sollen.
+Wenn man mehr als -1000 balance hat, kann man beliebig viel abheben, so dass die balance unter -1000 fallen kann.
+
+Doctrings kommen in die Methode:
+
+def withdraw(self, amount):
+    """Withdraw from the account."""
+    self.balance -= amount
+
+Kein Docstring bei setHolder().
+Account holder wird nicht verändert in __main__.
