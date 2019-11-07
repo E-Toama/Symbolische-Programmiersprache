@@ -50,7 +50,7 @@ class TextDocument:
                     count += 1
                 else:
                     continue;
-        result += '...'
+        result += ' ...'
         return result
 
 
