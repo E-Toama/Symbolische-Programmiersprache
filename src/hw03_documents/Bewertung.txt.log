@@ -1,0 +1,88 @@
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+OK
+.
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+OK
+C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw03_documents\Julias\src\hw03_documents\test_documents.py:26: ResourceWarning: unclosed file <_io.TextIOWrapper name='./hw03_documents/example_document1.txt' mode='r' encoding='cp65001'>
+  doc1 = TextDocument.from_file("./hw03_documents/example_document1.txt")
+F
+======================================================================
+FAIL: testFromFileMethod (hw03_documents.test_documents.TextDocumentTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw03_documents\Julias\src\hw03_documents\test_documents.py", line 30, in testFromFileMethod
+    self.assertEqual(token_set, expected_token_set)
+AssertionError: Items in the first set but not the second:
+'Dr.'
+'U.S.'
+'Strangelove'
+'President'
+Items in the second set but not the first:
+'president'
+'strangelove'
+'u.s.'
+'dr.'
+
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+FAILED (failures=1)
+F
+======================================================================
+FAIL: testToString (hw03_documents.test_documents.TextDocumentTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw03_documents\Julias\src\hw03_documents\test_documents.py", line 44, in testToString
+    self.assertEqual(str(doc3), "Dr. Strangelove is the...")
+AssertionError: 'Dr. Strangelove is the ...' != 'Dr. Strangelove is the...'
+- Dr. Strangelove is the ...
+?                       -
++ Dr. Strangelove is the...
+
+
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+FAILED (failures=1)
+E
+======================================================================
+ERROR: testWordOverlap (hw03_documents.test_documents.TextDocumentTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw03_documents\Julias\src\hw03_documents\test_documents.py", line 50, in testWordOverlap
+    self.assertEqual(doc_1.word_overlap(doc_2), 1)
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw03_documents\Julias\src\hw03_documents\document.py", line 63, in word_overlap
+    doc2 = countWords(other_doc)
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw03_documents\Julias\src\hw03_documents\document.py", line 13, in countWords
+    txt = word_tokenize(text)
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw03_documents\Julias\src\hw03_documents\document.py", line 4, in word_tokenize
+    return nltk.word_tokenize(text)
+  File "C:\Users\Johannes\AppData\Local\Programs\Python\Python37\lib\site-packages\nltk\tokenize\__init__.py", line 144, in word_tokenize
+    sentences = [text] if preserve_line else sent_tokenize(text, language)
+  File "C:\Users\Johannes\AppData\Local\Programs\Python\Python37\lib\site-packages\nltk\tokenize\__init__.py", line 106, in sent_tokenize
+    return tokenizer.tokenize(text)
+  File "C:\Users\Johannes\AppData\Local\Programs\Python\Python37\lib\site-packages\nltk\tokenize\punkt.py", line 1277, in tokenize
+    return list(self.sentences_from_text(text, realign_boundaries))
+  File "C:\Users\Johannes\AppData\Local\Programs\Python\Python37\lib\site-packages\nltk\tokenize\punkt.py", line 1331, in sentences_from_text
+    return [text[s:e] for s, e in self.span_tokenize(text, realign_boundaries)]
+  File "C:\Users\Johannes\AppData\Local\Programs\Python\Python37\lib\site-packages\nltk\tokenize\punkt.py", line 1331, in <listcomp>
+    return [text[s:e] for s, e in self.span_tokenize(text, realign_boundaries)]
+  File "C:\Users\Johannes\AppData\Local\Programs\Python\Python37\lib\site-packages\nltk\tokenize\punkt.py", line 1321, in span_tokenize
+    for sl in slices:
+  File "C:\Users\Johannes\AppData\Local\Programs\Python\Python37\lib\site-packages\nltk\tokenize\punkt.py", line 1362, in _realign_boundaries
+    for sl1, sl2 in _pair_iter(slices):
+  File "C:\Users\Johannes\AppData\Local\Programs\Python\Python37\lib\site-packages\nltk\tokenize\punkt.py", line 318, in _pair_iter
+    prev = next(it)
+  File "C:\Users\Johannes\AppData\Local\Programs\Python\Python37\lib\site-packages\nltk\tokenize\punkt.py", line 1335, in _slices_from_text
+    for match in self._lang_vars.period_context_re().finditer(text):
+TypeError: expected string or bytes-like object
+
+----------------------------------------------------------------------
+Ran 1 test in 0.016s
+
+FAILED (errors=1)
