@@ -1,6 +1,6 @@
 import unittest
 from unittest import TestCase
-from hw05_naive_bayes_solution.naive_bayes_classifier import DataInstance,Dataset,NaiveBayesClassifier
+from hw05_naive_bayes.naive_bayes_classifier import DataInstance,Dataset,NaiveBayesClassifier
 
 training_inst = [DataInstance.from_list_of_feature_occurrences(sample[0], sample[1]) for sample in
                  [('meeting tomorrow meeting lecture'.split(' '), 'relevant'),
