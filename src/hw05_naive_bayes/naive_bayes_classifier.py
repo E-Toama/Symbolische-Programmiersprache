@@ -106,7 +106,6 @@ class NaiveBayesClassifier:
 
     def prediction_accuracy(self, dataset):
         """ Returns the accuracy of this classifier on a test set."""
-        # TODO: Exercise 4.
         predicted_list = []
         if len(dataset.instance_list) == 0:
             return 0
@@ -122,7 +121,6 @@ class NaiveBayesClassifier:
                 - log[P(word|other_category1)*P(other_category1)
                       + P(word|other_category2)*P(other_category2) + ...]
         """
-        # TODO: Exercise 5.
         category_log_prob = self.log_probability(word, category) + math.log(self.category_to_prior[category])
         score_others = 0
 
