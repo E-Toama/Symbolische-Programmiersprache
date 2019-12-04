@@ -54,13 +54,12 @@ class NaiveBayesClassifier:
     @classmethod
     def for_dataset(cls, dataset, smoothing = 1.0):
         """ Creates a NB-Classifier for a dataset."""
-        # (str,str) -> int | (word,label) -> count
+        # (str,str) -> int
         word_and_category_to_count = defaultdict(int) # maps tuples (word, category) to the number of occurences (of a word in a that category)
-        # str -> int | label -> number of instances of this label
+        # str -> int
         category_to_num_instances = defaultdict(int) # maps a category name to the number of instances in that category
         vocabsize = len(dataset.feature_set)
         for inst in dataset.instance_list:
-            # da defaultdicts, braucht man nicht ueberpruefen ob die Keys schon existieren
             for word in inst.feature_counts:
                 word_and_category_to_count[(word, inst.label)] += inst.feature_counts[word]
             category_to_num_instances[inst.label] += 1
