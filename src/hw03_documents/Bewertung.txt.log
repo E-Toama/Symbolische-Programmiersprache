@@ -1,11 +1,11 @@
 .
 ----------------------------------------------------------------------
-Ran 1 test in 0.016s
+Ran 1 test in 0.028s
 
 OK
 .
 ----------------------------------------------------------------------
-Ran 1 test in 0.016s
+Ran 1 test in 0.015s
 
 OK
 C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw03_documents\Julias\src\hw03_documents\test_documents.py:26: ResourceWarning: unclosed file <_io.TextIOWrapper name='./hw03_documents/example_document1.txt' mode='r' encoding='cp65001'>
@@ -18,18 +18,18 @@ Traceback (most recent call last):
   File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw03_documents\Julias\src\hw03_documents\test_documents.py", line 30, in testFromFileMethod
     self.assertEqual(token_set, expected_token_set)
 AssertionError: Items in the first set but not the second:
-'Dr.'
-'U.S.'
 'Strangelove'
 'President'
+'U.S.'
+'Dr.'
 Items in the second set but not the first:
-'president'
-'strangelove'
 'u.s.'
+'strangelove'
 'dr.'
+'president'
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.016s
+Ran 1 test in 0.031s
 
 FAILED (failures=1)
 F
@@ -46,7 +46,7 @@ AssertionError: 'Dr. Strangelove is the ...' != 'Dr. Strangelove is the...'
 
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.016s
+Ran 1 test in 0.018s
 
 FAILED (failures=1)
 E
@@ -83,6 +83,6 @@ Traceback (most recent call last):
 TypeError: expected string or bytes-like object
 
 ----------------------------------------------------------------------
-Ran 1 test in 0.016s
+Ran 1 test in 0.027s
 
 FAILED (errors=1)
