@@ -1,0 +1,7 @@
+hw04_text_search.test_comprehensions.TestComprehensions.test_multiply_by OK        0,5/0,5 points
+hw04_text_search.test_comprehensions.TestComprehensions.test_check_division OK        0,5/0,5 points
+hw04_text_search.test_comprehensions.TestComprehensions.test_div_less OK        0,5/0,5 points
+hw04_text_search.test_comprehensions.TestComprehensions.test_map_zip  OK        0,5/0,5 points
+hw04_text_search.test_comprehensions.TestComprehensions.test_word_to_length OK        0,5/0,5 points
+####################################
+TOTAL: 5/5 points
