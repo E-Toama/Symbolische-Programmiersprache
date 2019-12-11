@@ -75,27 +75,43 @@ class KNNClassifier:
         self.vectorsOfDoc_collection = [(doc, self.doc_collection.tfidf(doc.token_counts))
                                         for doc in self.doc_collection.docid_to_doc.values()]
 
-    def calculate_similarities(self, vecTestDoc, vectorsOfTrainDocs):
-        #TODO calculate similarities between test and train documents and label them [(similarity, label),...]
-        pass
-
+   def calculate_similarities(self, vecTestDoc, vectorsOfTrainDocs):
+        similarities_list = []
+        for (document, weights) in vectorsOfTrainDocs:
+            similarity = self.doc_collection.cosine_similarity(vecTestDoc, weights)
+            similarities_list.append((similarity, document.category))
+        return similarities_list
+        
     def order_nearest_to_farthest(self, distances):
-        #TODO order the labeled points from nearest to farthest
-        pass
+        return sorted(distances, key=lambda x: x[0], reverse=True)
 
     def labels_k_closest(self, sorted_distances):
-        #TODO find the labels for the k closest points
-        pass
-
-    def choose_one(self, labels) :
-        #TODO reduce k until you find a unique winner
-        pass
-
-    def classify(self, test_file):
-        #TODO classify test document
+        temp = sorted_distances[0:self.n_neighbors]
+        res = []
+        for (similarity, category) in temp:
+            res.append(category)
+        return res
+        
+    def choose_one(self, labels):
+        count_list = Counter(labels)
+        k = self.n_neighbors
+        winners_list = count_list.most_common(k)
+        while len(winners_list) != 1 and winners_list[0][1] == winners_list[1][1]:
+            if k > 2:
+                k -= 1
+            else:
+                break
+        return winners_list[0][0]
+        
+     def classify(self, test_file):
         test_doc = TextDocument.from_file(test_file, 'unknowcat')
-        pass
-
-    def get_accuracy(self, gold, predicted):
-        #TODO calculate accuracy
-        pass
+        temp = self.calculate_similarities(self.doc_collection.tfidf(test_doc.token_counts),
+                                           self.vectorsOfDoc_collection)
+        cats = self.labels_k_closest(self.order_nearest_to_farthest(temp))
+        res = self.choose_one(cats)
+        return res
+        
+      def get_accuracy(self, gold, predicted):
+        pred = [predicted[i] for i in range(len(predicted)) if predicted[i] == gold[i]]
+        all = len(gold)
+        return len(pred) * 100 / all
