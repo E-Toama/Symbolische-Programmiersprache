@@ -84,7 +84,7 @@ class KNNClassifier:
         similarities_list = []
         for (document, weights) in vectorsOfTrainDocs:
             similarity = self.doc_collection.cosine_similarity(vecTestDoc, weights)
-        similarities_list.append((similarity, document.category))
+            similarities_list.append((similarity, document.category))
         return similarities_list
 
     def order_nearest_to_farthest(self, distances):
