@@ -1,6 +1,6 @@
 import string
 import numpy as np
-import random
+import random, math
 
 class Reader:
 
@@ -12,22 +12,36 @@ class Reader:
         self.vector_spaced_data = self.data_to_vectorspace()
 
     def get_lines(self):
-        #TODO return list of courses from file
-        pass
+        #TODO 1 return list of courses from file
+        result = []
+        with open(self.path, "r") as file:
+            line = file.readline()
+            while line != "":
+                result.append(line.strip())
+                line = file.readline()
+        return result
 
     def normalize_word(self,word):
-        #TODO normalize word by lower casing and deleting punctuation from word
+        #TODO 2 normalize word by lower casing and deleting punctuation from word
         #TODO use set of punctuation symbols self.punctuation
-        pass
+        for symbol in string.punctuation:
+            if symbol in word:
+                word = word.replace(symbol, '')
+        return word.lower()
 
     def get_vocabulary(self):
-        #TODO return list of unique words from file and sort them alphabetically
-        pass
+        #TODO 3 return list of unique words from file and sort them alphabetically
+        normalized_courses = [self.normalize_word(x) for x in self.get_lines()]
+        vocabulary = set()
+        for elem in normalized_courses:
+            vocabulary = vocabulary.union(elem.split(' '))
+        return sorted(vocabulary)
 
     def vectorspaced(self,course):
-        #TODO represent course by one-hot vector: vector filled with 0s, except for a 1 at the position associated with word in vocabulary
+        #TODO 4 represent course by one-hot vector: vector filled with 0s, except for a 1 at the position associated with word in vocabulary
         #TODO length of vector should be equal vocabulary size
-        pass
+        temp = [(x in self.normalize_word(course).split(' ')) for x in self.vocabulary]
+        return list(map(int, temp))
 
 
     def data_to_vectorspace(self):
@@ -41,22 +55,30 @@ class Kmeans:
         self.means = None
 
     def distance(self, x,y):
-        #TODO calculate Euclidean distance between two vectors x and y
-        pass
+        #TODO 5 calculate Euclidean distance between two vectors x and y
+        result = 0
+        for i in range(len(x)):
+            result += (x[i] - y[i])**2
+        return math.sqrt(result)
 
     def classify(self,input):
-        #TODO calculate Euclidean distances between input and the means and return the mean index with min distance
-        pass
+        #TODO 6 calculate Euclidean distances between input and the means and return the mean index with min distance
+        return min(range(self.k), key=lambda i: self.distance(input, self.means[i]))
 
     def vector_mean(self,vectors):
         #TODO calculate mean of the list of vectors
+        zipped = zip(*vectors)
+        result = []
+        for tuple in zipped:
+            result.append(sum([x for x in tuple])/len(tuple))
+        return result
 
     def train(self, inputs):
         # choose k random points as the initial means
         self.means = random.sample(inputs, self.k)#step 1
 
         #uncomment the following line and use the given means for the unittest
-        #self.means = [inputs[32], inputs[67], inputs[46]]
+        self.means = [inputs[32], inputs[67], inputs[46]]
 
         assignments = None
         iter = 0
