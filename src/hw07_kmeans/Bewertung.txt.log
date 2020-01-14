@@ -1,119 +1,35 @@
-E
-======================================================================
-ERROR: test_01_courses (hw07_kmeans.test_kmeans.ClusteringTest)
+.
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\test_kmeans.py", line 11, in setUp
-    self.reader = Reader(filename)
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 10, in __init__
-    self.courses = self.get_lines()
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 17, in get_lines
-    with open(self.path, "r") as file:
-FileNotFoundError: [Errno 2] No such file or directory: 'data/courses.txt'
+Ran 1 test in 0.022s
 
+OK
+.
 ----------------------------------------------------------------------
-Ran 1 test in 0.001s
+Ran 1 test in 0.010s
 
-FAILED (errors=1)
-E
-======================================================================
-ERROR: test_02_normalize (hw07_kmeans.test_kmeans.ClusteringTest)
+OK
+.
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\test_kmeans.py", line 11, in setUp
-    self.reader = Reader(filename)
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 10, in __init__
-    self.courses = self.get_lines()
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 17, in get_lines
-    with open(self.path, "r") as file:
-FileNotFoundError: [Errno 2] No such file or directory: 'data/courses.txt'
+Ran 1 test in 0.015s
 
+OK
+.
 ----------------------------------------------------------------------
-Ran 1 test in 0.002s
+Ran 1 test in 0.010s
 
-FAILED (errors=1)
-E
-======================================================================
-ERROR: test_03_vocabulary (hw07_kmeans.test_kmeans.ClusteringTest)
+OK
+.
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\test_kmeans.py", line 11, in setUp
-    self.reader = Reader(filename)
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 10, in __init__
-    self.courses = self.get_lines()
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 17, in get_lines
-    with open(self.path, "r") as file:
-FileNotFoundError: [Errno 2] No such file or directory: 'data/courses.txt'
+Ran 1 test in 0.025s
 
+OK
+.
 ----------------------------------------------------------------------
-Ran 1 test in 0.001s
+Ran 1 test in 0.048s
 
-FAILED (errors=1)
-E
-======================================================================
-ERROR: test_04_vectorspaced (hw07_kmeans.test_kmeans.ClusteringTest)
+OK
+.
 ----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\test_kmeans.py", line 11, in setUp
-    self.reader = Reader(filename)
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 10, in __init__
-    self.courses = self.get_lines()
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 17, in get_lines
-    with open(self.path, "r") as file:
-FileNotFoundError: [Errno 2] No such file or directory: 'data/courses.txt'
+Ran 1 test in 0.840s
 
-----------------------------------------------------------------------
-Ran 1 test in 0.005s
-
-FAILED (errors=1)
-E
-======================================================================
-ERROR: test_05_distance (hw07_kmeans.test_kmeans.ClusteringTest)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\test_kmeans.py", line 11, in setUp
-    self.reader = Reader(filename)
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 10, in __init__
-    self.courses = self.get_lines()
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 17, in get_lines
-    with open(self.path, "r") as file:
-FileNotFoundError: [Errno 2] No such file or directory: 'data/courses.txt'
-
-----------------------------------------------------------------------
-Ran 1 test in 0.004s
-
-FAILED (errors=1)
-E
-======================================================================
-ERROR: test_06_vector_mean (hw07_kmeans.test_kmeans.ClusteringTest)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\test_kmeans.py", line 11, in setUp
-    self.reader = Reader(filename)
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 10, in __init__
-    self.courses = self.get_lines()
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 17, in get_lines
-    with open(self.path, "r") as file:
-FileNotFoundError: [Errno 2] No such file or directory: 'data/courses.txt'
-
-----------------------------------------------------------------------
-Ran 1 test in 0.001s
-
-FAILED (errors=1)
-E
-======================================================================
-ERROR: test_07_classify (hw07_kmeans.test_kmeans.ClusteringTest)
-----------------------------------------------------------------------
-Traceback (most recent call last):
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\test_kmeans.py", line 11, in setUp
-    self.reader = Reader(filename)
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 10, in __init__
-    self.courses = self.get_lines()
-  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw07_kmeans\Julias\src\hw07_kmeans\kmeans.py", line 17, in get_lines
-    with open(self.path, "r") as file:
-FileNotFoundError: [Errno 2] No such file or directory: 'data/courses.txt'
-
-----------------------------------------------------------------------
-Ran 1 test in 0.002s
-
-FAILED (errors=1)
+OK
