@@ -2,28 +2,36 @@ import nltk
 from nltk.stem.wordnet import WordNetLemmatizer
 from nltk.corpus import wordnet
 
+
 class HyponymSearcher(object):
     def __init__(self, text_path):
 
         self.noun_lemmas = []
 
-        #TODO Read text as a string
+        with open(text_path, mode='r') as file:
+            text = file.read()
+            sentences = nltk.sent_tokenize(text)
+            tokens = nltk.word_tokenize(text)
+            tags = nltk.pos_tag(tokens)
+            lemmatizer = WordNetLemmatizer()
+            nouns = [tag[0] for tag in tags if tag[1].startswith("N")]
+            self.noun_lemmas = [lemmatizer.lemmatize(lemma, wordnet.NOUN) for lemma in nouns][:1262]
 
-        #TODO Split into sentences: use nltk.sent_tokenize
+    def hypernymOf(self, synset1, synset2):
+        res = False
+        if synset1 == synset2 or synset2 in synset1.hypernyms():
+            return True
+        for hypernym in synset1.hypernyms():
+            if synset2 == hypernym:
+                return True
+            if self.hypernymOf(hypernym, synset2):
+                return True
+        return False
 
-        #TODO Split into tokens: use nltk.word_tokenize
-
-        #TODO Perform POS tagging
-
-        #TODO lemmatize nouns (any token whose POS tags starts with "N"): use WordNetLemmatizer()
-
-        #TODO determine all noun lemmas and save it in self.noun_lemmas
-
-
-    def hypernymOf(self,synset1, synset2):
-        #TODO Is synset2 a hypernym of synset 1? (Or the same synset), return True or False
-        pass
-
-    def get_hyponyms(self,hypernym):
-        #TODO determine set of noun lemmas in ada_lovelace.txt that are hyponyms of the given hypernym
-        pass
+    def get_hyponyms(self, hypernym):
+        hyponyms = []
+        for lemma in self.noun_lemmas:
+            for synset in wordnet.synsets(lemma):
+                if self.hypernymOf(synset, hypernym):
+                    hyponyms.append(lemma)
+        return set(hyponyms)
