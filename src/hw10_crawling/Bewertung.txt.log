@@ -1,0 +1,143 @@
+E
+======================================================================
+ERROR: test_01_get_text (hw10_crawling.test_analysis.AnalysisTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\Julias\src\hw10_crawling\test_analysis.py", line 18, in test_01_get_text
+    last_paragraph = self.text.split("\n")[-1]
+AttributeError: 'NoneType' object has no attribute 'split'
+
+----------------------------------------------------------------------
+Ran 1 test in 1.450s
+
+FAILED (errors=1)
+F
+======================================================================
+FAIL: test_02_get_headline (hw10_crawling.test_analysis.AnalysisTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\Julias\src\hw10_crawling\test_analysis.py", line 22, in test_02_get_headline
+    self.assertEqual(self.headline,"Hybrid Drivers Wanted")
+AssertionError: None != 'Hybrid Drivers Wanted'
+
+----------------------------------------------------------------------
+Ran 1 test in 3.620s
+
+FAILED (failures=1)
+E
+======================================================================
+ERROR: test_03_get_normalized_tokens (hw10_crawling.test_analysis.AnalysisTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\Julias\src\hw10_crawling\test_analysis.py", line 25, in test_03_get_normalized_tokens
+    self.assertEqual(self.tokens_normalized[:4], ['advertisement','supported', 'behind', 'wheel'])
+TypeError: 'NoneType' object is not subscriptable
+
+----------------------------------------------------------------------
+Ran 1 test in 3.355s
+
+FAILED (errors=1)
+E
+======================================================================
+ERROR: test_04_pos_dict (hw10_crawling.test_analysis.AnalysisTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\Julias\src\hw10_crawling\test_analysis.py", line 28, in test_04_pos_dict
+    self.assertEqual(self.tagsDict["driving"], {'NN', 'VBG'})
+TypeError: 'NoneType' object is not subscriptable
+
+----------------------------------------------------------------------
+Ran 1 test in 1.447s
+
+FAILED (errors=1)
+E
+======================================================================
+ERROR: test_05_filter_dict_homographs (hw10_crawling.test_analysis.AnalysisTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\Julias\src\hw10_crawling\test_analysis.py", line 33, in test_05_filter_dict_homographs
+    self.assertEqual(len(self.tagsDict),24)
+TypeError: object of type 'NoneType' has no len()
+
+----------------------------------------------------------------------
+Ran 1 test in 0.450s
+
+FAILED (errors=1)
+E
+======================================================================
+ERROR: test_06_homographs (hw10_crawling.test_analysis.AnalysisTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\Julias\src\hw10_crawling\test_analysis.py", line 37, in test_06_homographs
+    self.assertTrue("light" in homographs)
+TypeError: argument of type 'NoneType' is not iterable
+
+----------------------------------------------------------------------
+Ran 1 test in 5.055s
+
+FAILED (errors=1)
+E
+======================================================================
+ERROR: test_read_text (hw10_crawling.test_spaCy.ExtractorTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\Julias\src\hw10_crawling\test_spaCy.py", line 16, in test_read_text
+    self.assertEqual(len(self.extractor.sentences), 12)
+TypeError: object of type 'NoneType' has no len()
+
+----------------------------------------------------------------------
+Ran 1 test in 0.030s
+
+FAILED (errors=1)
+E
+======================================================================
+ERROR: test_entities_and_nounChunks (hw10_crawling.test_spaCy.ExtractorTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\Julias\src\hw10_crawling\test_spaCy.py", line 19, in test_entities_and_nounChunks
+    entitiesAndChunks = [el.text for el in self.entitiesAndChunks]
+TypeError: 'NoneType' object is not iterable
+
+----------------------------------------------------------------------
+Ran 1 test in 0.025s
+
+FAILED (errors=1)
+F
+======================================================================
+FAIL: test_update_tokenizer (hw10_crawling.test_spaCy.ExtractorTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\Julias\src\hw10_crawling\test_spaCy.py", line 26, in test_update_tokenizer
+    self.assertEqual(len(self.doc), 3)
+AssertionError: 6 != 3
+
+----------------------------------------------------------------------
+Ran 1 test in 0.020s
+
+FAILED (failures=1)
+E
+======================================================================
+ERROR: test_extract_money_relations (hw10_crawling.test_spaCy.ExtractorTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\Julias\src\hw10_crawling\test_spaCy.py", line 32, in test_extract_money_relations
+    relations = self.extractor.extract_money_relations(self.doc)[0]
+TypeError: 'NoneType' object is not subscriptable
+
+----------------------------------------------------------------------
+Ran 1 test in 0.020s
+
+FAILED (errors=1)
+E
+======================================================================
+ERROR: test_relations_in_text (hw10_crawling.test_spaCy.ExtractorTest)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Johannes\Desktop\SymbProgGÜ\Homework\tmp_repositories\abgabe\hw10_crawling\Julias\src\hw10_crawling\test_spaCy.py", line 37, in test_relations_in_text
+    relation_in_last_sentence = relations_in_text[-1]
+TypeError: 'NoneType' object is not subscriptable
+
+----------------------------------------------------------------------
+Ran 1 test in 0.020s
+
+FAILED (errors=1)
